@@ -1,0 +1,88 @@
+.appartmentWrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  min-height: 1121px;
+}
+
+.appartmentWrapper .availableHomes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.appartmentWrapper .contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: start;
+  width: 100%;
+  background-color: #08412e85;
+  height: 753px;
+  padding: 120px;
+  z-index: 10;
+}
+
+.appartmentWrapper .contents > img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.appartmentWrapper .titleWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.appartmentWrapper .titleWrapper h3 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42.64px;
+  letter-spacing: 1.76px;
+  color: #ffffff;
+}
+
+.appartmentWrapper .titleWrapper p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 32px;
+  letter-spacing: -2.5%;
+}
+
+.appartmentWrapper .image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 15;
+  pointer-events: none;
+}
+
+@media (max-width: 1200px) {
+  .appartmentWrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 1500px) {
+  .appartmentWrapper .contents {
+    height: 600px;
+    padding: 50px;
+  }
+
+  .appartmentWrapper .image {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .appartmentWrapper .contents {
+    height: 500px;
+  }
+}

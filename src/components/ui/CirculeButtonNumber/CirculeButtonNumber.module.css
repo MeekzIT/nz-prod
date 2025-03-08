@@ -1,0 +1,48 @@
+.circuleButtonContainer {
+  width: 8vw;
+  height: 8vw;
+  max-width: 96px;
+  max-height: 96px;
+  min-width: 40px;
+  min-height: 40px;
+  border: solid 4px #08412e;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+
+.isActived {
+  background-color: #08412e;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .circuleButtonContainer {
+    width: 5vw;
+    height: 5vw;
+    max-width: 96px;
+    max-height: 96px;
+    min-width: 40px;
+    min-height: 40px;
+    border: solid 4px #08412e;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .number {
+    font-size: 18px;
+  }
+}

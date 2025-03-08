@@ -1,0 +1,127 @@
+/* Schema.module.css */
+.schema {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin: 90px auto;
+  justify-content: center;
+}
+
+.schemaBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.schemaContainer {
+  width: "70%";
+}
+
+.schemaBlock {
+  height: min-content;
+  border-radius: 8px;
+  border: 1px solid #08412e;
+  padding: 10px 25px;
+}
+
+.title {
+  font-family: Bokonique;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 58px;
+  text-align: left;
+  color: #08412e;
+}
+
+.hoverEffect {
+  cursor: pointer;
+  fill: transparent;
+  stroke: transparent;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.hoverEffect:hover {
+  stroke-width: 3;
+}
+
+.inStock:hover {
+  fill: rgba(255, 0, 0, 0.5);
+  stroke: red;
+}
+
+.outOfStock:hover {
+  fill: rgba(255, 255, 0, 0.5);
+  stroke: yellow;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3%;
+  justify-items: center;
+}
+
+.floorBlock {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #08412e;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 28px;
+}
+
+.floorNumber {
+  font-family: Bokonique;
+  font-weight: 700;
+  font-size: 89px;
+  text-align: center;
+  margin: 0;
+}
+
+.floorText {
+  font-family: Bokonique;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 58px;
+  margin: 0;
+}
+
+.floorImage {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .schema {
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 25px;
+    justify-content: center;
+    margin: 30px auto;
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0;
+    justify-items: center;
+  }
+
+  .floorNumber,
+  .floorText {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10%;
+    justify-items: center;
+  }
+}

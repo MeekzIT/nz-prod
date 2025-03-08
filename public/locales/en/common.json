@@ -1,0 +1,70 @@
+{
+  "welcome": "Welcome to our website",
+  "contact": {
+    "title": "CONTACT US",
+    "address": "8502 Preston Rd. Inglewood, Maine 98380"
+  },
+  "form": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phone": "Phone",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit",
+    "submitted": "Form submitted.",
+    "success": "Successfully sent.",
+    "failed": "Failed to send."
+  },
+  "errors": {
+    "required": "This field is required",
+    "minLength": "Must be at least {{count}} characters",
+    "maxLength": "Cannot exceed {{count}} characters",
+    "lettersOnly": "Only letters are allowed",
+    "invalidPhone": "Enter a valid phone number",
+    "invalidEmail": "Invalid email format"
+  },
+  "modal": {
+    "title": "Notification",
+    "description": "This is a message from the server."
+  },
+  "footer": {
+    "useful_links": "Useful Links",
+    "about_us": "About Us",
+    "projects": "Projects",
+    "contact_us": "Contact Us",
+    "contact": "Contact",
+    "follow_us": "Follow Us",
+    "phone_number": "0(406) 555-0120",
+    "email": "Jane.Cooper@gmail.com",
+    "address": "8502 Preston Rd. Inglewood, Maine 98380",
+    "facebook": "FB"
+  },
+  "appartament": {
+    "floorId": "Floor",
+    "square_meter": "Square Meter",
+    "value": "{{value}} m²",
+    "room_count": "Room Count",
+    "hallway_i18": "Hallway",
+    "kitchen_i18": "Kitchen",
+    "living_room_i18": "Living Room",
+    "bedroom_i18": "Bedroom",
+    "bathroom_i18": "Bathroom",
+    "office_i18": "Office",
+    "closet_i18": "Closet",
+    "terasa_i18": "Terasa",
+    "balcony_i18": "Balcony",
+    "order": "Apply now!",
+    "application": "SEND APPLICATION"
+  },
+  "home": {
+    "title": "Home",
+    "projects": "Projects",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "slider": "Available Apartments • Available Apartments •"
+  },
+  "project": {
+    "title": "Projects",
+    "description": "The complex consists of twenty-two above-ground and four underground floors and has a number of amenities."
+  }
+}
