@@ -51,7 +51,11 @@ export default function Home({
         <main style={{ flex: "1", textAlign: "center" }}>
           <FirstSlider sliderData={sliderPageData} />
           <AboutUs aboutUsData={aboutUsPage} />
-          <AvailableApartaments availableData={availableApartamentsPageData} />
+          <div id="available-apartments">
+            <AvailableApartaments
+              availableData={availableApartamentsPageData}
+            />
+          </div>
           <HomeSliderComponent ofersPageData={ofersPageData} />
           <GoogleMap />
           <ContactUsHome />

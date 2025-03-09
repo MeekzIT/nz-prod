@@ -2,6 +2,8 @@ import styles from "./AvailableApartaments.module.css";
 import Image from "next/image";
 import { AvaiableHomesButtonLInk } from "@/components/ui/AvaiableHomesButtonLInk/AvaiableHomesButtonLInk";
 import { IAvailable } from "@/shared/api/types/schemas";
+import { useTranslation } from "next-i18next";
+import AvailableImage from "./AvailableImage";
 
 interface ProjectsPagePropsType {
   availableData: IAvailable[];
@@ -14,30 +16,19 @@ export function AvailableApartaments({ availableData }: ProjectsPagePropsType) {
     label: `${floor}-ՐԴ ՀԱՐԿ`,
     description: `ՀԱՍԱՆԵԼ Է ${count} ԲՆԱԿԱՐԱՆ`,
   }));
-
+  const { t } = useTranslation();
   return (
     <div>
       <div className={styles.appartmentWrapper}>
         <div className={styles.availableHomes}>
           <AvaiableHomesButtonLInk href={"#"} floors={floors} />
-          <Image
-            className={styles.image}
-            src="/assets/home-appartament.svg"
-            alt="Apartment"
-            height={1123}
-            width={883}
-          />
+          <AvailableImage />
         </div>
         <div className={styles.contents}>
           <div className={styles.titleWrapper}>
-            <h3>ԱՌԿԱ Է 158 ԲՆԱԿԱՐԱՆ</h3>
+            <h3>{t("avvailable.title")}</h3>
 
-            <p>
-              Բնակելի համալիրն ունի 22 վերգետնյա հարկ և քառահարկ ստորգետնյա
-              ավտոկայանատեղի։ Շենքում առկա է 158 բնակարան։ Կան մի շարք
-              հարմարություններ։ Գնորդները կարող են իրենց բնակարանների ներքին
-              հարդարման
-            </p>
+            <p>{t("avvailable.desc")}</p>
           </div>
           <Image
             src="/assets/cuted-house.svg"

@@ -102,3 +102,9 @@
     visibility: visible;
   }
 }
+
+@media (max-width: 1024px) {
+  .floorMap {
+    width: 100%;
+  }
+}

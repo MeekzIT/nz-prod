@@ -1,6 +1,7 @@
 .sliderContainer {
   max-width: calc(100% - 480px);
   position: relative;
+  margin-bottom: 30px;
 }
 
 .swiper {
@@ -77,4 +78,8 @@
   .swiper-button-next {
     display: none;
   }
+}
+
+.swiper-pagination-bullet-active {
+  background: #2e4a34;
 }

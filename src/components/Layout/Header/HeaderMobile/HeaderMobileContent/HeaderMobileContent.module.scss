@@ -20,7 +20,7 @@
   width: fit-content;
   margin-left: auto;
 
-  @include respond(mobileL) {
+  @media (max-width: 430px) {
     width: 100%;
   }
 }

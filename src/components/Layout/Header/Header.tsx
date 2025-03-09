@@ -8,12 +8,12 @@ import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-// import useIsMobile from "./isMobile";
 import useToggle from "@/shared/hooks/useToggle";
+import useIsMobile from "@/shared/hooks/isMobile";
 
 const Header = () => {
   const pathname = usePathname();
-  // const isMobile = useIsMobile();
+  const isMobile = useIsMobile();
 
   const [isOpen, toggle, setIsOpen] = useToggle(false);
 
@@ -74,9 +74,9 @@ const Header = () => {
             </div>
           </ul>
         </ul>
-        {/* {isMobile ? (
+        {isMobile ? (
           <HeaderMobile isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} />
-        ) : undefined} */}
+        ) : undefined}
       </div>
     </header>
   );

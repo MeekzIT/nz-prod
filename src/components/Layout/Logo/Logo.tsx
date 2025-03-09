@@ -11,10 +11,10 @@ export const Logo: FC<ILogo> = ({ onClick }) => {
   return (
     <Link href="/" onClick={onClick}>
       <Image
-        src="/assets/logo.svg"
+        src="/assets/logo.png"
         priority
         alt="logo"
-        width={134}
+        width={90}
         height={60}
       />
     </Link>

@@ -303,12 +303,10 @@
   }
 
   .appartSliderContainer {
-    width: 60%;
-    height: 70%;
+    width: 600px;
     border: 2px solid #2e4a34;
+    border-radius: 10px;
     padding: 10px;
-    max-height: 70vh;
-    overflow-y: scroll;
 
     @include respond(tablet) {
       width: 90%;

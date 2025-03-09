@@ -64,25 +64,45 @@
   pointer-events: none;
 }
 
-@media (max-width: 1200px) {
-  .appartmentWrapper {
-    display: none;
-  }
-}
-
 @media (max-width: 1500px) {
   .appartmentWrapper .contents {
     height: 600px;
-    padding: 50px;
+    padding: 50px 0;
   }
 
   .appartmentWrapper .image {
     width: 50%;
+    height: 670px;
+  }
+
+  .contents {
+    padding: 0 20px;
   }
 }
 
 @media (max-width: 1300px) {
-  .appartmentWrapper .contents {
-    height: 500px;
+  .appartmentWrapper {
+    height: 800px;
+  }
+
+  .contents {
+    height: 900px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contents {
+    min-height: 900px;
+    padding: 0 !important;
+    align-items: center !important;
+  }
+  .appartmentWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .appartmentWrapper .image {
+    width: 100%;
   }
 }

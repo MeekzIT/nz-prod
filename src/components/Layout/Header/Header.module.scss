@@ -41,15 +41,17 @@
     }
 
     .link {
-      font-size: 16px;
+      font-size: 18px;
       padding: 8px 12px;
+      font-weight: 500;
       border-radius: 8px;
       cursor: pointer;
       color: var(--Neutral-White);
       transition: 0.3s all;
+      color: white;
 
       &:hover {
-        background-color: var(--Neutral-Gray-3);
+        background-color: white;
         color: #08412e;
       }
     }

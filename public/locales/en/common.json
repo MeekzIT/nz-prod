@@ -66,5 +66,15 @@
   "project": {
     "title": "Projects",
     "description": "The complex consists of twenty-two above-ground and four underground floors and has a number of amenities."
+  },
+  "offer": {
+    "title": "We offer",
+    "desc1": "a complex consisting of twenty-two above-ground and four underground",
+    "desc2": "floors, which has a range of",
+    "desc3": "facilities."
+  },
+  "avvailable": {
+    "title": "158 APARTMENTS AVAILABLE",
+    "desc": "The residential complex has 22 above-ground floors and a four-story underground parking garage. The building has 158 apartments. There are a number of amenities. Buyers can choose the interior design of their apartments"
   }
 }

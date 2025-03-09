@@ -2,6 +2,7 @@ import React from "react";
 import SliderComponent from "@/components/ui/Slider/Slider";
 import styles from "./SliderComponent.module.scss";
 import { IOffers } from "@/shared/api/offers.api";
+import { useTranslation } from "next-i18next";
 
 interface HomeSliderComponentPropsType {
   ofersPageData: IOffers[];
@@ -10,17 +11,18 @@ interface HomeSliderComponentPropsType {
 const HomeSliderComponent = ({
   ofersPageData,
 }: HomeSliderComponentPropsType) => {
+  const { t } = useTranslation();
   return (
     <div className={styles.container}>
       <div className={styles.infoBlock}>
         <div className={styles.horizontalblock} />
         <div className={styles.textBlock}>
-          <p className={styles.title}>Մենք առաջարկում ենք</p>
+          <p className={styles.title}>{t("offer.title")}</p>
           <p className={styles.description}>
-            քսաներկու վերգետնյա և չորս ստորգետնյա
+            {t("offer.desc1")}
             <br />
-            հարկից բաղկացած համալիր է, որն ունի մի
-            <br /> շարք հարմարություններ։ 
+            {t("offer.desc2")}
+            <br /> {t("offer.desc3")}
           </p>
         </div>
       </div>
