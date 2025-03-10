@@ -2,7 +2,8 @@
   "welcome": "Добро пожаловать на наш сайт",
   "contact": {
     "title": "СВЯЗАТЬСЯ С НАМИ",
-    "address": "8502 Preston Rd. Инглвуд, Мэн 98380"
+    "address": "Ваагн Давтян 1/4",
+    "address1": "Антараин 158 and 160"
   },
   "form": {
     "firstName": "Имя",
@@ -34,9 +35,11 @@
     "contact_us": "Свяжитесь с нами",
     "contact": "Связь",
     "follow_us": "Подписывайтесь на нас",
-    "phone_number": "0(406) 555-0120",
-    "email": "Jane.Cooper@gmail.com",
-    "address": "8502 Preston Rd. Инглвуд, Мэн 98380",
+    "phone_number": "+37455262622",
+    "phone_number1": "+37444262622",
+    "email": "info@nurazyanconstruction.am",
+    "address": "Ваагн Давтян 1/4",
+    "address1": "Антараин 158 and 160",
     "facebook": "FB"
   },
   "appartament": {

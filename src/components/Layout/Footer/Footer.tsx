@@ -45,6 +45,16 @@ const Footer = () => {
           href: "",
         },
         {
+          id: 891,
+          name: (
+            <span className={styles.iconsBox}>
+              <FaPhoneAlt />
+              {t("footer.phone_number1")}
+            </span>
+          ),
+          href: "",
+        },
+        {
           id: 89,
           name: (
             <span className={styles.iconsBox}>
@@ -72,12 +82,12 @@ const Footer = () => {
     {
       id: 1,
       icon: <FaFacebookF />,
-      href: "https://t.me/cryptonode_io",
+      href: "https://www.facebook.com/profile.php?id=61571974784187",
     },
     {
       id: 2,
       icon: <FaInstagram />,
-      href: "https://t.me/cryptonode_io",
+      href: "https://www.instagram.com/nurazyan_construction/",
     },
     {
       id: 3,
@@ -120,6 +130,7 @@ const Footer = () => {
                 key={link.id}
                 className={styles.socialItems}
                 href={link.href}
+                target="_blank"
               >
                 {link.icon}
               </Link>

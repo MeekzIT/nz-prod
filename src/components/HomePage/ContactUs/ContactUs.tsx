@@ -54,22 +54,38 @@ const ContactUsHome = () => {
       {/* Left Side - Contact Info */}
       <div className={styles.contactInfo}>
         <div className={styles.infoItem}>
-          <a href="tel:5551234567">
+          <a href={`tel:${t("footer.phone_number")}`}>
             <FaPhoneAlt className={styles.icon} />
           </a>
-          <span>(406) 555-0120</span>
+          <span>{t("footer.phone_number")}</span>
+        </div>
+        <div className={styles.infoItem}>
+          <a href={`tel:${t("footer.phone_number1")}`}>
+            <FaPhoneAlt className={styles.icon} />
+          </a>
+          <span>{t("footer.phone_number1")}</span>
         </div>
         <div className={styles.infoItem}>
           <FaEnvelope className={styles.icon} />
-          <span>Jane.Cooper@gmail.com</span>
+          <span>{t("footer.email")}</span>
         </div>
         <div className={styles.infoItem}>
           <FaMapMarkerAlt className={styles.icon} />
           <span>{t("contact.address")}</span>
         </div>
         <div className={styles.socialIcons}>
-          <FaFacebook className={styles.socialIcon} />
-          <FaInstagram className={styles.socialIcon} />
+          <a
+            href="https://www.facebook.com/profile.php?id=61571974784187"
+            target="_blank"
+          >
+            <FaFacebook className={styles.socialIcon} />
+          </a>
+          <a
+            href="https://www.instagram.com/nurazyan_construction/"
+            target="_blank"
+          >
+            <FaInstagram className={styles.socialIcon} />
+          </a>
         </div>
       </div>
 
