@@ -112,32 +112,9 @@
 
   .contacts {
     display: flex;
-    justify-content: flex-end;
-    padding: 24px 50px;
+    justify-content: center;
     border-top: 1px solid white;
-
-    @include respond(mobile) {
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .socials {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-
-      .icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        background: var(--Neutral-Gray-2);
-        cursor: pointer;
-      }
-    }
+    padding: 20px 0;
   }
 
   .product {

@@ -3,6 +3,7 @@ import Header from "@/components/Layout/Header/Header";
 import DetailsBlock from "@/components/ProjectsPage/ProjectDetails/DetailsBlock/DetailsBlock";
 import { ProjectData } from "@/shared/api/projectsService.api";
 import { GetServerSideProps } from "next";
+import Head from "next/head";
 
 interface ProjectDetailsProps {
   projectPageData: ProjectData;
@@ -12,11 +13,19 @@ export default function ProjectsDetails({
   projectPageData,
 }: ProjectDetailsProps) {
   return (
-    <div>
-      <Header />
-      <DetailsBlock data={projectPageData} />
-      <Footer />
-    </div>
+    <>
+      <Head>
+        <title>Nurazyan</title>
+        <meta name="description" content="Our Projects Nurazyan Construction" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div>
+        <Header />
+        <DetailsBlock data={projectPageData} />
+        <Footer />
+      </div>
+    </>
   );
 }
 

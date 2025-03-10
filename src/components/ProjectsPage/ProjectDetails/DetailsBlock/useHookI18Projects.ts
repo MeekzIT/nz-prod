@@ -11,8 +11,6 @@ interface IuseHookI18 {
 export const useHookI18Projects = ({ data }: IuseHookI18) => {
   const { i18n } = useTranslation();
 
-  console.log(data, "data");
-
   switch (i18n.language) {
     case "am":
       return {

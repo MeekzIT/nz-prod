@@ -6,14 +6,17 @@ import ImagesBlock from "@/components/ui/ImagesBlock/ImagesBlock";
 import styles from "./AboutUs.module.css";
 import { useHookI18HomeAbout } from "./useHookI18HomeAbout";
 import { IAboutUsShort } from "@/shared/api/types/about";
+import { useRouter } from "next/navigation";
+import { useTranslation } from "next-i18next";
 
 interface IHomeAboutUs {
   aboutUsData: IAboutUsShort;
 }
 
 const AboutUs = ({ aboutUsData }: IHomeAboutUs) => {
+  const { t } = useTranslation();
   const { description1 } = useHookI18HomeAbout(aboutUsData);
-  console.log(aboutUsData, "aboutUsData");
+  const router = useRouter();
 
   return (
     <div className={styles.container}>
@@ -23,6 +26,11 @@ const AboutUs = ({ aboutUsData }: IHomeAboutUs) => {
             <AboutUsTitle />
           </p>
           <div className={styles.description}>{description1}</div>
+          <div className={styles.description}>
+            <button onClick={() => router.push("/about-us")}>
+              {t("home.about")}
+            </button>
+          </div>
         </div>
         <ImagesBlock
           imageData={[

@@ -243,14 +243,22 @@
   width: 100%;
   display: flex;
   gap: 15px;
+
+  div {
+    margin-top: 10px;
+    width: 50%;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+
+    div {
+      width: 100%;
+    }
+  }
 }
 
-.inputGroup div {
-  margin-top: 10px;
-  width: 50%;
-}
-
-.error {
+.inputGroup .error {
   color: maroon;
 }
 

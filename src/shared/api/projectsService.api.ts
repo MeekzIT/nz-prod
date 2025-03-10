@@ -35,7 +35,6 @@ export const ProjectsService = {
   async getProjectData(id: number): Promise<ProjectData | undefined> {
     try {
       const response = await axiosInstance.get(`/projects/${id}`);
-      console.log(response, "response");
       return response.data ?? {};
     } catch (error) {
       console.error(`Ошибка при загрузке проекта с id ${id}:`, error);

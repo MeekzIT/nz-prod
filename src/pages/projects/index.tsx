@@ -4,6 +4,7 @@ import ProjectsPage from "@/components/ProjectsPage/ProjectsPage";
 import { ProjectData } from "@/shared/api/projectsService.api";
 import { IAvailable } from "@/shared/api/types/schemas";
 import { GetServerSideProps } from "next";
+import Head from "next/head";
 
 interface ProjectsPropsType {
   projectsData: ProjectData[];
@@ -15,22 +16,30 @@ export default function Projects({
   availableData,
 }: ProjectsPropsType) {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        minHeight: "100vh",
-      }}
-    >
-      <Header />
-      <main style={{ flex: "1", textAlign: "center" }}>
-        <ProjectsPage
-          projectPageData={projectsData}
-          availableData={availableData}
-        />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Head>
+        <title>Nurazyan</title>
+        <meta name="description" content="Our Projects Nurazyan Construction" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+        }}
+      >
+        <Header />
+        <main style={{ flex: "1", textAlign: "center" }}>
+          <ProjectsPage
+            projectPageData={projectsData}
+            availableData={availableData}
+          />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
 

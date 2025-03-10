@@ -1,24 +1,20 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import styles from "./FirstSlider.module.css";
 import clsx from "clsx";
 import { HomeFirstSliderTypes } from "@/shared/api/types/homeFirstSliderTypes";
 import { FaArrowDown } from "react-icons/fa";
 import { useTranslation } from "next-i18next";
-import useIsMobile from "@/shared/hooks/isMobile";
 
 interface FirstSliderProps {
   sliderData: HomeFirstSliderTypes[];
 }
 
 const FirstSlider = ({ sliderData }: FirstSliderProps) => {
-  const { t } = useTranslation();
-  const isMobile = useIsMobile();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
   const scrollToAvailable = () => {
     const element = document.getElementById("available-apartments");
     if (element) {
@@ -51,40 +47,46 @@ const FirstSlider = ({ sliderData }: FirstSliderProps) => {
               className={styles.image}
             />
             <div className={styles.overlay}>
-              <h2 className={styles.title}>{slide.titleAm}</h2>
-              <p className={styles.subtitle}>{slide.subTitleAm}</p>
+              <h2 className={styles.title}>
+                {lang === "am"
+                  ? slide.titleAm
+                  : lang === "ru"
+                  ? slide.titleRu
+                  : slide.titleEn}
+              </h2>
+              <p className={styles.subtitle}>
+                {lang === "am"
+                  ? slide.subTitleAm
+                  : lang === "ru"
+                  ? slide.subTitleRu
+                  : slide.subTitleEn}
+              </p>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {!isMobile && (
-        <div className={styles.ctaContainer} onClick={scrollToAvailable}>
-          <svg width="200" height="200" viewBox="0 0 200 200">
-            <defs>
-              <path
-                id="circlePath"
-                d="M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
-              />
-            </defs>
-            <text
-              fontSize="19"
-              letter-spacing="2px"
-              fill="white"
-              fontWeight="bold"
-            >
-              <textPath
-                href="#circlePath"
-                startOffset="50%"
-                textAnchor="middle"
-              >
-                {t("home.slider")}
-              </textPath>
-            </text>
-          </svg>
-          <FaArrowDown className={styles.arrowIcon} />
-        </div>
-      )}
+      <div className={styles.ctaContainer} onClick={scrollToAvailable}>
+        <svg width="200" height="200" viewBox="0 0 200 200">
+          <defs>
+            <path
+              id="circlePath"
+              d="M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+            />
+          </defs>
+          <text
+            fontSize="19"
+            letter-spacing="2px"
+            fill="white"
+            fontWeight="bold"
+          >
+            <textPath href="#circlePath" startOffset="50%" textAnchor="middle">
+              {t("home.slider")}
+            </textPath>
+          </text>
+        </svg>
+        <FaArrowDown className={styles.arrowIcon} />
+      </div>
     </div>
   );
 };

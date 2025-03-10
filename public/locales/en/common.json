@@ -24,8 +24,8 @@
     "invalidEmail": "Invalid email format"
   },
   "modal": {
-    "title": "Notification",
-    "description": "This is a message from the server."
+    "title": "APPLICATION RECEIVED",
+    "description": "OUR SPECIALIST WILL CONTACT YOU BY PHONE"
   },
   "footer": {
     "useful_links": "Useful Links",
