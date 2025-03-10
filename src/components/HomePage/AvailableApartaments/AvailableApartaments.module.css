@@ -1,29 +1,64 @@
 .appartmentWrapper {
   position: relative;
   display: flex;
-  justify-content: flex-end;
   align-items: flex-end;
+  justify-content: space-between;
   width: 100%;
-  min-height: 1121px;
 }
 
-.appartmentWrapper .availableHomes {
+.background {
+  position: absolute;
+  width: 100%;
+  background-color: #08412e85;
+  bottom: 0;
+  height: 80%;
+  z-index: -1;
+}
+
+.AvailableImage {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50%;
+  max-width: 625px;
+  z-index: 99;
+}
+
+.apartmentImg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.svgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
+}
+
+.svgOverlay polygon {
+  pointer-events: all;
 }
 
 .appartmentWrapper .contents {
-  position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: start;
-  width: 100%;
-  background-color: #08412e85;
-  height: 753px;
-  padding: 120px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-height: 753px;
   z-index: 10;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .appartmentWrapper .contents > img {
@@ -56,53 +91,50 @@
   letter-spacing: -2.5%;
 }
 
-.appartmentWrapper .image {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 15;
-  pointer-events: none;
-}
-
+/* 📏 Адаптивность */
 @media (max-width: 1500px) {
   .appartmentWrapper .contents {
-    height: 600px;
-    padding: 50px 0;
-  }
-
-  .appartmentWrapper .image {
-    width: 50%;
-    height: 670px;
-  }
-
-  .contents {
-    padding: 0 20px;
+    min-height: 600px;
+    padding: 50px;
   }
 }
 
 @media (max-width: 1300px) {
   .appartmentWrapper {
-    height: 800px;
+    height: auto;
   }
 
-  .contents {
-    height: 900px;
-    padding: 0 20px;
+  .appartmentWrapper .contents {
+    min-height: 500px;
+    padding: 50px;
   }
 }
 
 @media (max-width: 1024px) {
-  .contents {
-    min-height: 900px;
-    padding: 0 !important;
-    align-items: center !important;
-  }
   .appartmentWrapper {
-    display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
-  .appartmentWrapper .image {
+  .AvailableImage {
     width: 100%;
+    max-width: 100%;
   }
+
+  .appartmentWrapper .contents {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+  }
+}
+
+.floorLabel {
+  pointer-events: none;
+  font-weight: bold;
+  fill: white;
+  text-align: end;
+  font-size: 40px;
+  z-index: 10;
+  text-align: end;
 }

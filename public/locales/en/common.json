@@ -75,6 +75,8 @@
   },
   "avvailable": {
     "title": "158 APARTMENTS AVAILABLE",
-    "desc": "The residential complex has 22 above-ground floors and a four-story underground parking garage. The building has 158 apartments. There are a number of amenities. Buyers can choose the interior design of their apartments"
+    "desc": "The residential complex has 22 above-ground floors and a four-story underground parking garage. The building has 158 apartments. There are a number of amenities. Buyers can choose the interior design of their apartments",
+    "floor": "{{count}}-th floor",
+    "avvail": "Available {{count}} Apartment"
   }
 }

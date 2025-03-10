@@ -100,3 +100,13 @@
   width: 100px;
   height: 100px;
 }
+
+@media (max-width: 768px) {
+  .sliderContainer {
+    height: 328px !important;
+  }
+
+  .verticalSlider {
+    height: 328px !important;
+  }
+}
