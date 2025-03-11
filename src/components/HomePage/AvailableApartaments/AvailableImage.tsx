@@ -56,6 +56,8 @@
 import { useTranslation } from "next-i18next";
 import styles from "./AvailableApartaments.module.css";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import useIsMobile from "@/shared/hooks/isMobile";
 
 const apartments = [
   { id: 10, coords: "1181,65 5,65 5,180 1181,180" },
@@ -79,6 +81,8 @@ interface IAvailableImage {
 
 export function AvailableImage({ floors }: IAvailableImage) {
   const { t } = useTranslation();
+  const router = useRouter();
+  const isMobile = useIsMobile();
   const [hoveredId, setHoveredId] = useState<null | number>(null);
 
   const getFloorLabel = (id: number) => {
@@ -125,6 +129,11 @@ export function AvailableImage({ floors }: IAvailableImage) {
                 strokeWidth={3}
                 onMouseEnter={() => setHoveredId(id)}
                 onMouseLeave={() => setHoveredId(null)}
+                onMouseDown={() =>
+                  isMobile
+                    ? router.push(`/schema/${id}`)
+                    : router.push(`/schema/${hoveredId}`)
+                }
                 style={{ cursor: "pointer" }}
                 className={styles.polygon}
               />
@@ -135,10 +144,10 @@ export function AvailableImage({ floors }: IAvailableImage) {
                     y={y}
                     textAnchor="start"
                     dominantBaseline="middle"
-                    fontSize="20"
+                    fontSize="40"
                     fill="white"
                   >
-                    {`${floorLabel}`}
+                    {`${floorLabel}`}, {"  "}
                     {t("avvailable.avvail", { count: floorDesc })}
                   </text>
                 </>
