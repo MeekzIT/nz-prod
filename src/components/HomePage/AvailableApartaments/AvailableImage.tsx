@@ -144,7 +144,7 @@ export function AvailableImage({ floors }: IAvailableImage) {
                     y={y}
                     textAnchor="start"
                     dominantBaseline="middle"
-                    fontSize="40"
+                    fontSize="30"
                     fill="white"
                   >
                     {`${floorLabel}`}, {"  "}
